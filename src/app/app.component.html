@@ -2,6 +2,23 @@
 
 <button (click)="addItem()">Add Item</button>
 
+<div *ngIf="title == 'nicolas'">
+  Este es nicolas
+</div>
+<div *ngIf="title == 'julian'">
+  Este es julian
+</div>
+<div *ngIf="title == 'camilo'">
+  Este es camilo
+</div>
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'nicolas'">Este es nicolas</p>
+  <p *ngSwitchCase="'julian'">Este es julian</p>
+  <p *ngSwitchCase="'camilo'">Este es camilo</p>
+  <p *ngSwitchDefault>No hay match</p>
+</div>
+  
 <ul>
   <li *ngIf="items.length === 0">The list is empty</li>
   <li *ngFor="let name of items; index as i">
