@@ -25,8 +25,9 @@
     {{ i }} {{ name }}
     <button (click)="deleteItem(i)">Delete</button>
   </li>
-  <div *ngFor="let product of products">
+  <div class="product-grid">
     <app-product
+      *ngFor="let product of products"
       [product]="product"
       (productClicked)="clickProduct($event)"
     ></app-product>
