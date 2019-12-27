@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.sass']
 })
 export class CardComponent implements OnInit {
-  itemList: string;
-
   constructor() {}
 
   ngOnInit() {}
