@@ -1,6 +1,6 @@
-<input type="text" [(ngModel)]="title" >
+<input type="text" [(ngModel)]="title" />
 
-<button (click)="addItem()">Add Item</button>
+<app-product></app-product>
 
 <div *ngIf="title == 'nicolas'">
   Este es nicolas
@@ -18,15 +18,18 @@
   <p *ngSwitchCase="'camilo'">Este es camilo</p>
   <p *ngSwitchDefault>No hay match</p>
 </div>
-  
+
 <ul>
   <li *ngIf="items.length === 0">The list is empty</li>
   <li *ngFor="let name of items; index as i">
-    {{i}} {{name}}
+    {{ i }} {{ name }}
     <button (click)="deleteItem(i)">Delete</button>
   </li>
-  <div *ngFor="let product of products ">
-    <app-product [product]="product" ></app-product>
+  <div class="product-grid">
+    <app-product
+      *ngFor="let product of products"
+      [product]="product"
+      (productClicked)="clickProduct($event)"
+    ></app-product>
   </div>
-  <app-login></app-login>
 </ul>
