@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product.component';
 import { CardComponent } from './card/card.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, CardComponent],
+  declarations: [AppComponent, ProductComponent, CardComponent, HighlightDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
