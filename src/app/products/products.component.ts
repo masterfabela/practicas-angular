@@ -7,7 +7,6 @@ import { Product } from '../product.model';
   styleUrls: ['./products.component.sass']
 })
 export class ProductsComponent implements OnInit {
-
   products: Product[] = [
     {
       id: '1',
@@ -54,5 +53,4 @@ export class ProductsComponent implements OnInit {
     console.log('product');
     console.log(id);
   }
-
 }
