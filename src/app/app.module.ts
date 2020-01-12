@@ -32,7 +32,7 @@ import { ExponentialPipe } from './exponential.pipe';
     BannerComponent,
     ExponentialPipe
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
